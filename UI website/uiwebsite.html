@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        ::selection {
+            color: white;
+            background-color: black;
+        }
+
+        .container {
+            background-color: black;
+            /* display: grid;
+            gap: 2%; */
+            height: 100vh;
+            width: 100vw;
+            padding: 2% 0;
+            /* grid-template-columns: repeat(3, auto );
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas: "header header header header"
+                                 "section section section section"
+                                 "article article article article"
+                                 "section1 section1 section1 section1"
+                                 "profile profile profile profile "
+                                 "footer footer footer footer"; */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .pavan {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 1%;
+            align-items: center;
+            /* grid-area: header; */
+            background-color: rgb(205, 248, 248);
+            height: 10vh;
+        }
+
+        .section {
+            /* grid-area: section; */
+            background-color: rgb(255, 255, 255);
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section p,
+        h1 {
+            padding: 1%;
+        }
+
+        .mem {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 3%;
+        }
+
+        .article {
+            background-color: rgb(205, 248, 248);
+            height: 140vh;
+            display: grid;
+            justify-content: space-evenly;
+            padding-left: 2%;
+            align-items: center;
+            grid-template-areas: "item data"
+                "bata cata"
+                "eata fata";
+        }
+
+        .item {
+            grid-area: item;
+        }
+
+        .data {
+            grid-area: data;
+        }
+
+        .bata {
+            grid-area: bata;
+        }
+
+        .cata {
+            grid-area: cata;
+        }
+
+        .eata {
+            grid-area: eata;
+        }
+
+        .fata {
+            grid-area: fata;
+        }
+
+        /* .item2 {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 34.5vh;
+            width: 12vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        } */
+
+        .item {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .lead {
+            font-size: 11px;
+            height: 14px;
+            width: 47px;
+            border: 1px solid gray;
+            padding: 0.3vh;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        .pa1 {
+            position: absolute;
+            height: 287px;
+            width: 260px;
+            left: -40px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .item2 {
+            position: absolute;
+            left: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 22.5vh;
+            width: 16vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        .data {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: -27vh;
+            left: 50vw; */
+        }
+
+        /* .lead {
+            font-size: 11px;
+            height: 14px;
+            width: 47px;
+            border: 1px solid gray;
+            padding: 0.3vh;
+            text-align: center;
+            background-color: lightgray;
+        } */
+
+        /* .pa1 {
+            position: absolute;
+            height: 240px;
+            width: 220px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        } */
+        .bata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .cata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .eata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .fata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .img1 {
+            height: 247px;
+            width: 220px;
+
+        }
+
+        .section1 {
+            /* grid-area: section1; */
+            background-color: rgb(255, 255, 255);
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3vh;
+        }
+
+        button {
+            margin-top: 2vh;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+
+        a:hover {
+            background-color: rgb(205, 248, 248);
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 2, 2);
+        }
+
+        .profile {
+            /* grid-area: profile; */
+            height: 50vh;
+            background-color: rgb(205, 248, 248);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-left: 2%;
+        }
+
+        .pro {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 22.5vh;
+            width: 16vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+
+        .footer {
+            /* grid-area: footer; */
+            background-color: rgb(255, 255, 255);
+            height: 73vh;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-areas: "foot1 foot2 foot3 foot4";
+            justify-content: space-evenly;
+            padding-top:10vh ;
+        }
+        .foot1{
+            grid-area: foot1;
+        }
+        .foot2{
+            grid-area: foot2;
+        }
+        .foot3{
+            grid-area: foot3;
+        }
+        .foot4{
+            grid-area: foot4;
+        }
+        .foot1 {
+            width: 20vw;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-evenly;
+            /* margin-left: 10vw;
+            margin-top: 10vh; */
+        }
+
+        .logos {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            gap: 20px;
+        }
+
+        .size {
+            font-size: 30px;
+            padding: 2%;
+        }
+        .aaa{
+            margin: 20%;
+        }
+
+        @media screen and (min-width:550px) and (max-width:1024px) {
+            .container {
+            background-color: black;
+            /* display: grid;
+            gap: 2%; */
+            height: 100vh;
+            padding: 2% 0;
+            /* grid-template-columns: repeat(3, auto );
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas: "header header header header"
+                                 "section section section section"
+                                 "article article article article"
+                                 "section1 section1 section1 section1"
+                                 "profile profile profile profile "
+                                 "footer footer footer footer"; */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .pavan {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 1%;
+            align-items: center;
+            /* grid-area: header; */
+            background-color: rgb(205, 248, 248);
+            height: 10vh;
+        }
+
+        .section {
+            /* grid-area: section; */
+            background-color: rgb(255, 255, 255);
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section p,
+        h1 {
+            padding: 1%;
+        }
+
+        .mem {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 3%;
+        }
+
+        .article {
+            background-color: rgb(205, 248, 248);
+            height: 280vh;
+            display: grid;
+            justify-content: space-evenly;
+            padding-left: 2%;
+            padding-top: 5vh;
+            align-items: center;
+            grid-template-areas: "item"
+                                 "data"
+                                 "bata"
+                                 "cata"
+                                 "eata"
+                                 "fata";
+        }
+
+        .item {
+            grid-area: item;
+        }
+
+        .data {
+            grid-area: data;
+        }
+
+        .bata {
+            grid-area: bata;
+        }
+
+        .cata {
+            grid-area: cata;
+        }
+
+        .eata {
+            grid-area: eata;
+        }
+
+        .fata {
+            grid-area: fata;
+        }
+
+        /* .item2 {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 34.5vh;
+            width: 12vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        } */
+
+        .item {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .lead {
+            font-size: 11px;
+            height: 14px;
+            width: 47px;
+            border: 1px solid gray;
+            padding: 0.3vh;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        .pa1 {
+            position: absolute;
+            height: 287px;
+            width: 260px;
+            left: -40px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .item2 {
+            position: absolute;
+            left: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 22.5vh;
+            width: 36vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        .data {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: -27vh;
+            left: 50vw; */
+        }
+
+        /* .lead {
+            font-size: 11px;
+            height: 14px;
+            width: 47px;
+            border: 1px solid gray;
+            padding: 0.3vh;
+            text-align: center;
+            background-color: lightgray;
+        } */
+
+        /* .pa1 {
+            position: absolute;
+            height: 240px;
+            width: 220px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        } */
+        .bata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .cata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .eata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .fata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .img1 {
+            height: 247px;
+            width: 220px;
+
+        }
+
+        .section1 {
+            /* grid-area: section1; */
+            background-color: rgb(255, 255, 255);
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3vh;
+        }
+
+        button {
+            margin-top: 2vh;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+
+        a:hover {
+            background-color: rgb(205, 248, 248);
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 2, 2);
+        }
+
+        .profile {
+            /* grid-area: profile; */
+            height: 90vh;
+            background-color: rgb(205, 248, 248);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-left: 2%;
+        }
+
+        .pro {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 22.5vh;
+            width: 36vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+
+        .footer {
+            /* grid-area: footer; */
+            background-color: rgb(255, 255, 255);
+            height: 73vh;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-areas: "foot1 foot2 foot3 foot4";
+            justify-content: space-evenly;
+            padding-top:10vh ;
+        }
+        .foot1{
+            grid-area: foot1;
+        }
+        .foot2{
+            grid-area: foot2;
+        }
+        .foot3{
+            grid-area: foot3;
+        }
+        .foot4{
+            grid-area: foot4;
+        }
+        .foot1 {
+            width: 20vw;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-evenly;
+            /* margin-left: 10vw;
+            margin-top: 10vh; */
+        }
+
+        .logos {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            gap: 20px;
+        }
+
+        .size {
+            font-size: 30px;
+            padding: 2%;
+        }
+        .aaa{
+            margin: 20%;
+        }  
+        }
+        @media screen and (min-width:360px) and (max-width:550px) {
+            .container {
+            background-color: black;
+            /* display: grid;
+            gap: 2%; */
+            height: 100vh;
+            padding: 2% 0;
+            /* grid-template-columns: repeat(3, auto );
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas: "header header header header"
+                                 "section section section section"
+                                 "article article article article"
+                                 "section1 section1 section1 section1"
+                                 "profile profile profile profile "
+                                 "footer footer footer footer"; */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .pavan {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 1%;
+            align-items: center;
+            /* grid-area: header; */
+            background-color: rgb(205, 248, 248);
+            height: 10vh;
+        }
+
+        .section {
+            /* grid-area: section; */
+            background-color: rgb(255, 255, 255);
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section p,
+        h1 {
+            padding: 1%;
+        }
+
+        .mem {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            padding: 3%;
+        }
+        h1{
+            font-size: 20px;
+        }
+        .article {
+            background-color: rgb(205, 248, 248);
+            height: 280vh;
+            display: grid;
+            justify-content: space-evenly;
+            padding-left: 2%;
+            padding-top: 5vh;
+            align-items: center;
+            grid-template-areas: "item"
+                                 "data"
+                                 "bata"
+                                 "cata"
+                                 "eata"
+                                 "fata";
+        }
+
+        .item {
+            grid-area: item;
+        }
+
+        .data {
+            grid-area: data;
+        }
+
+        .bata {
+            grid-area: bata;
+        }
+
+        .cata {
+            grid-area: cata;
+        }
+
+        .eata {
+            grid-area: eata;
+        }
+
+        .fata {
+            grid-area: fata;
+        }
+
+        /* .item2 {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 34.5vh;
+            width: 12vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        } */
+
+        .item {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .lead {
+            font-size: 11px;
+            height: 14px;
+            width: 47px;
+            border: 1px solid gray;
+            padding: 0.3vh;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        .pa1 {
+            position: absolute;
+            height: 287px;
+            width: 260px;
+            left: -40px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        #pa11{
+            /* position: absolute; */
+            padding-left: -200px;
+            margin-left: 100px;
+        }
+        .item2 {
+            position: absolute;
+            left: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 22.5vh;
+            width: 36vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        .data {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: -27vh;
+            left: 50vw; */
+        }
+
+        /* .lead {
+            font-size: 11px;
+            height: 14px;
+            width: 47px;
+            border: 1px solid gray;
+            padding: 0.3vh;
+            text-align: center;
+            background-color: lightgray;
+        } */
+
+        /* .pa1 {
+            position: absolute;
+            height: 240px;
+            width: 220px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        } */
+        .bata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .cata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .eata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .fata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .img1 {
+            height: 247px;
+            width: 220px;
+
+        }
+
+        .section1 {
+            /* grid-area: section1; */
+            background-color: rgb(255, 255, 255);
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3vh;
+        }
+
+        button {
+            margin-top: 2vh;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+
+        a:hover {
+            background-color: rgb(205, 248, 248);
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 2, 2);
+        }
+
+        .profile {
+            /* grid-area: profile; */
+            height: 90vh;
+            background-color: rgb(205, 248, 248);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-left: 2%;
+        }
+
+        .pro {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 22.5vh;
+            width: 36vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+
+        .footer {
+            /* grid-area: footer; */
+            background-color: rgb(255, 255, 255);
+            height: 73vh;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-areas: "foot1 foot2 foot3 foot4";
+            justify-content: space-evenly;
+            padding-top:10vh ;
+        }
+        .foot1{
+            grid-area: foot1;
+        }
+        .foot2{
+            grid-area: foot2;
+        }
+        .foot3{
+            grid-area: foot3;
+        }
+        .foot4{
+            grid-area: foot4;
+        }
+        .foot1 {
+            width: 20vw;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-evenly;
+            /* margin-left: 10vw;
+            margin-top: 10vh; */
+        }
+
+        .logos {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            gap: 20px;
+        }
+
+        .size {
+            font-size: 30px;
+            padding: 2%;
+        }
+        .aaa{
+            margin: 20%;
+        }  
+        }
+        @media screen and (min-width:280px) and (max-width:360px) {
+            .container {
+            background-color: black;
+            /* display: grid;
+            gap: 2%; */
+            height: 100vh;
+            padding: 2% 0;
+            /* grid-template-columns: repeat(3, auto );
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas: "header header header header"
+                                 "section section section section"
+                                 "article article article article"
+                                 "section1 section1 section1 section1"
+                                 "profile profile profile profile "
+                                 "footer footer footer footer"; */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .pavan {
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 1%;
+            align-items: center;
+            /* grid-area: header; */
+            background-color: rgb(205, 248, 248);
+            height: 10vh;
+        }
+
+        .section {
+            /* grid-area: section; */
+            background-color: rgb(255, 255, 255);
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section p,
+        h1 {
+            padding: 1%;
+        }
+
+        .mem {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            padding: 3%;
+        }
+        .p2{
+        font-size: 12px;
+        }
+        h1{
+            font-size: 18px;
+        }
+        .article {
+            background-color: rgb(205, 248, 248);
+            height: 400vh;
+            display: grid;
+            margin-top: 0;
+            justify-content: space-evenly;
+            /* padding-left: 2%; */
+            /* padding-top: 5vh; */
+            /* row-gap: 300px; */
+            align-items: center;
+            grid-template-areas: "item"
+                                 "data"
+                                 "bata"
+                                 "cata"
+                                 "eata"
+                                 "fata";
+        }
+
+        .item {
+            grid-area: item;
+        }
+
+        .data {
+            grid-area: data;
+        }
+
+        .bata {
+            grid-area: bata;
+        }
+
+        .cata {
+            grid-area: cata;
+        }
+
+        .eata {
+            grid-area: eata;
+        }
+
+        .fata {
+            grid-area: fata;
+        }
+
+        /* .item2 {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 34.5vh;
+            width: 12vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        } */
+
+        .item {
+            height: 37vh;
+            width: 585px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: -100px;
+
+            
+            /* border: 2px solid black; */
+            /* position: relative; */
+            /* top: 10vh;
+            left: 5vw; */
+        }
+        /* #bro{
+            padding-left: 100px;
+            margin-left: 300px;
+        } */
+        .lead {
+            font-size: 11px;
+            height: 14px;
+            width: 47px;
+            border: 1px solid gray;
+            padding: 0.3vh;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        .pa1 {
+            position: absolute;
+            height: 287px;
+            width: 260px;
+            left: -40px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        #pa11{
+            /* position: absolute; */
+            padding-left: -200px;
+            margin-left: 230px;
+        }
+        .item1{
+            position: absolute;
+            right: 520px;
+        }
+
+        .item2 {
+            /* position: absolute; */
+            margin-top: 310px;
+            margin-left: -220px;
+            display: flex;
+            flex-direction: column;
+            height: 22.5vh;
+            width: 260px;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        .data {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            top: -100px;
+            /* top: -27vh;
+            left: 50vw; */
+        }
+
+        /* .lead {
+            font-size: 11px;
+            height: 14px;
+            width: 47px;
+            border: 1px solid gray;
+            padding: 0.3vh;
+            text-align: center;
+            background-color: lightgray;
+        } */
+
+        /* .pa1 {
+            position: absolute;
+            height: 240px;
+            width: 220px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        } */
+        .bata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            top: -100px;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .cata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            top: -100px;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .eata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            top: -100px;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .fata {
+            height: 37vh;
+            width: 585px;
+            /* border: 2px solid black; */
+            position: relative;
+            top: -100px;
+            /* top: 10vh;
+            left: 5vw; */
+        }
+
+        .img1 {
+            height: 247px;
+            width: 220px;
+
+        }
+
+        .section1 {
+            /* grid-area: section1; */
+            background-color: rgb(255, 255, 255);
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3vh;
+        }
+
+        button {
+            margin-top: 2vh;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+
+        a:hover {
+            background-color: rgb(205, 248, 248);
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 2, 2);
+        }
+
+        .profile {
+            /* grid-area: profile; */
+            height: 120vh;
+            background-color: rgb(205, 248, 248);
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            align-items: center;
+            /* padding-left: 6%; */
+        }
+
+        .pro {
+            margin-top: 200px;
+            margin-left: -170px;
+            display: flex;
+            flex-direction: column;
+            height: 20.5vh;
+            width: 40vw;
+            background-color: white;
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        #broo{
+            margin-top: -100px;
+        }
+
+        .footer {
+            /* grid-area: footer; */
+            background-color: rgb(255, 255, 255);
+            height: 73vh;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-areas: "foot1 foot2 foot3 foot4";
+            justify-content: space-evenly;
+            padding-top:10vh ;
+        }
+        .foot1{
+            grid-area: foot1;
+        }
+        .foot2{
+            grid-area: foot2;
+        }
+        .foot3{
+            grid-area: foot3;
+        }
+        .foot4{
+            grid-area: foot4;
+        }
+        .foot1 {
+            width: 20vw;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-evenly;
+            /* margin-left: 10vw;
+            margin-top: 10vh; */
+        }
+
+        .logos {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-content: flex-start;
+            gap: 20px;
+        }
+
+        .size {
+            font-size: 30px;
+            padding: 2%;
+        }
+        .aaa{
+            margin: 20%;
+        }  
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="aa header">
+            <p>Stark UI &nbsp;&nbsp; Team 03</p>
+            <a class="pavan" href="./uiwebsite.html">&nbsp; PAVAN SOLUTIONS</a>
+            <a href="./uiwebsite.html">Unlock 100+ Skills</a>
+        </div>
+        <div class="aa section">
+            <p class="p1">TEAM SECTION</p>
+            <h1>MEET THE TEAM BEHIND STARK</h1>
+            <p class="p2">we're currently open for new roles/positions's , join us</p>
+            <div class="mem">
+                <a href="./uiwebsite.html">ALL MEMBERS </a>
+                <a href="./uiwebsite.html">MEMBERS</a>
+                <a href="./uiwebsite.html">LEADERS</a>
+                <a href="./uiwebsite.html">INTERNS</a>
+            </div>
+        </div>
+        <div class="aa article">
+            <div class="item">
+                <div class="item1" id="bro">
+                    <div class="pa1"> <img class="img1" src="./img/pa11.jpg"></div>
+                </div>
+                <div class="item2">
+                    <h2>PAOne KUMAR</h2>
+                    <a class="lead">LEADER</a>
+                    <p>Role/position at Stark</p>
+                    <p>Employee or team member short bio can be added here.</p>
+                </div>
+            </div>
+            <div class="data">
+                <div class="item1" id="bro">
+                    <div class="pa1"> <img class="img1" src="./img/pa11.jpg"></div>
+                </div>
+                <div class="item2">
+                    <h2>PAOne KUMAR</h2>
+                    <a class="lead">LEADER</a>
+                    <p>Role/position at Spark</p>
+                    <p>Employee or team member short bio can be added here.</p>
+                </div>
+            </div>
+            <div class="bata">
+                <div class="item1" id="bro">
+                    <div class="pa1"> <img class="img1" src="./img/sololeveling1.jpg"></div>
+                </div>
+                <div class="item2">
+                    <h2>PAOne KUMAR</h2>
+                    <a class="lead">MEMBER</a>
+                    <p>Role/position at Spark</p>
+                    <p>Employee or team member short bio can be added here.</p>
+                </div>
+            </div>
+            <div class="cata">
+                <div class="item1" id="bro">
+                    <div class="pa1"> <img class="img1" src="./img/wind-breaker1.jpg"></div>
+                </div>
+                <div class="item2">
+                    <h2>PAOne KUMAR</h2>
+                    <a class="lead">MEMBER</a>
+                    <p>Role/position at Spark</p>
+                    <p>Employee or team member short bio can be added here.</p>
+                </div>
+            </div>
+            <div class="eata">
+                <div class="item1" id="bro">
+                    <div class="pa1"> <img class="img1" src="./img/aot1.jpg"></div>
+                </div>
+                <div class="item2">
+                    <h2>PAOne KUMAR</h2>
+                    <a class="lead">MEMBER</a>
+                    <p>Role/position at Spark</p>
+                    <p>Employee or team member short bio can be added here.</p>
+                </div>
+            </div>
+            <div class="fata">
+                <div class="item1" id="bro">
+                    <div class="pa1"> <img class="img1" src="./img/bleach1.jpg"></div>
+                </div>
+                <div class="item2">
+                    <h2>PAOne KUMAR</h2>
+                    <a class="lead">MEMBER</a>
+                    <p>Role/position at Spark</p>
+                    <p>Employee or team member short bio can be added here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="aa section1">
+            <h1>We're Hiring Now</h1>
+            <p>We're currently open for new roles/positions, join us!</p>
+            <button>JOIN OUR TEAM</button>
+        </div>
+        <div class="aa profile">
+            <div class="eata" id="pa11">
+                <div class="item1" id="broo">
+                    <div class="pa1"> <img class="img1" src="./img/kamuei1.jpeg"></div>
+                </div>
+                <div class="pro">
+                    <h2>PAOne KUMAR</h2>
+                    <a class="lead">INTERN</a>
+                    <p>Role/position at Spark</p>
+                    <p>Employee or team member short bio can be added here.</p>
+                </div>
+            </div>
+            <div class="fata" id="pa11">
+                <div class="item1" id="broo">
+                    <div class="pa1"> <img class="img1" src="./img/naruto1.jpg"></div>
+                </div>
+                <div class="pro">
+                    <h2>PAOne KUMAR</h2>
+                    <a class="lead">INTERN</a>
+                    <p>Role/position at Spark</p>
+                    <p>Employee or team member short bio can be added here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="aa footer">
+            <div class="foot1">
+                <h3>STARK UI</h3>
+                <p>Meet the team behind Stark .We're currently open for new roles/positions, join us!</p>
+                <div class="logos">
+                    <ion-icon class="size" name="logo-instagram"></ion-icon>
+                    <ion-icon class="size" name="logo-linkedin"></ion-icon>
+                    <ion-icon class="size" name="logo-youtube"></ion-icon>
+                </div>
+                <h5>@Copyrights 2022</h5>
+                <span>All Righits Reserved</span><br>
+                <span>Developed By Piegeon company Pvt Lmt</span>
+            </div>
+            <div class="foot2">
+                <h3 class="aaa">Headers</h3>
+                <p class="aaa">header01</p>
+                <p class="aaa">header02</p>
+                <p class="aaa">header03</p>
+                <p class="aaa">header04</p>
+                <br>
+                <br>
+                <h3 class="aaa">Navigation</h3>
+                <p class="aaa">Navigation01</p>
+                <p class="aaa">Navigation02</p>
+                <p class="aaa">Navigation03</p>
+                <p class="aaa">Navigation04</p>
+            </div>
+            <div class="foot3">
+                <h3 class="aaa">Content</h3>
+                <p class="aaa">Content01</p>
+                <p class="aaa">Content02</p>
+                <p class="aaa">Content03</p>
+                <p class="aaa">Content04</p>
+                <p class="aaa">Content05</p>
+                <p class="aaa">Content06</p>
+                <p class="aaa">Content07</p>
+                <p class="aaa">Content08</p>
+                <p class="aaa">Content09</p>
+                <p class="aaa">Content010</p>
+            </div>
+            <div class="foot4">
+                <h3 class="aaa">Career</h3>
+                <p class="aaa">Career01</p>
+                <p class="aaa">Career02</p>
+                <p class="aaa">Career03</p>
+                <p class="aaa">Career04</p>
+                <br>
+                <br>
+                <h3 class="aaa">Contact</h3>
+                <p class="aaa">Contact01</p>
+                <p class="aaa">Contact02</p>
+                <p class="aaa">Contact03</p>
+                <p class="aaa">Contact04</p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
