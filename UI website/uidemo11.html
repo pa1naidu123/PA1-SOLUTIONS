@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        :root{
+            --primary-color:white;
+            --secondary-color:rgb(205, 248, 248);
+            --color:black;
+            --a-hover-back:black;
+            --button-background:black;
+            --button-color:red;
+
+        }
+        .dark{
+            --primary-color:black;
+            --secondary-color:gray;
+            --color:white;
+            --a-hover-back:white;
+            --button-background:white;
+            --button-color:red;
+        }
         * {
             padding: 0;
             margin: 0;
@@ -14,7 +31,7 @@
 
         ::selection {
             color: white;
-            background-color: black;
+            background-color: var(--color);
         }
 
         .container {
@@ -25,7 +42,7 @@
 
         a {
             text-decoration: none;
-            color: black;
+            color: var(--color);
         }
 
         .header {
@@ -34,15 +51,22 @@
             justify-content: space-between;
             padding: 0 1%;
             align-items: center;
-            background-color: rgb(205, 248, 248);
+            background-color: var(--secondary-color);
+            color: var(--color);
             height: 10vh;
+        }
+        #moon{
+            height:40px;
+            width:40px;
+            cursor: pointer;
         }
 
         .section {
-            background-color: rgb(255, 255, 255);
+            background-color: var(--primary-color);
             height: 35vh;
             display: flex;
             flex-direction: column;
+            color: var(--color);
             align-items: center;
             justify-content: center;
         }
@@ -61,9 +85,10 @@
         }
 
         .article {
-            background-color: rgb(205, 248, 248);
+            background-color: var(--secondary-color);
             height: 140vh;
             display: grid;
+            color: var(--color);
             justify-content: space-around;
             padding-left: 7%;
             align-items: center;
@@ -109,7 +134,11 @@
             border: 1px solid gray;
             padding: 0.3vh;
             text-align: center;
-            background-color: lightgray;
+            background-color: var(--secondary-color);
+        }
+        .lead:hover{
+            background-color: var(--button-background);
+            color: var(--button-color);
         }
 
         .item1 {
@@ -117,7 +146,7 @@
             height: 287px;
             width: 260px;
             left: -40px;
-            background-color: white;
+            background-color: var(--primary-color);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -133,7 +162,7 @@
             justify-content: space-evenly;
             height: 270px;
             width: 16vw;
-            background-color: white;
+            background-color: var(--primary-color);
             padding: 1vh 2vh;
             border-radius: 5px;
         }
@@ -184,11 +213,12 @@
         }
 
         .section1 {
-            background-color: rgb(255, 255, 255);
+            background-color: var(--primary-color);
             height: 30vh;
             width: 100vw;
             display: flex;
             flex-direction: column;
+            color: var(--color);
             justify-content: center;
             align-items: center;
             gap: 3vh;
@@ -197,23 +227,25 @@
         button {
             margin-top: 2vh;
             padding: 10px;
-            background-color: black;
-            color: white;
+            background-color: var(--secondary-color);
+            color: black;
         }
 
         a:hover {
-            background-color: rgb(205, 248, 248);
+            background-color: var(--a-hover-back);
+            color: var(--secondary-color);
         }
 
         button:hover {
-            background-color: rgb(255, 255, 255);
+            background-color: var(--button-background);
             color: rgb(255, 2, 2);
         }
 
         .profile {
             height: 50vh;
             width: 100vw;
-            background-color: rgb(205, 248, 248);
+            background-color: var(--secondary-color);
+            color: var(--color);
             display: flex;
             flex-direction: row;
             padding-left: 7%;
@@ -228,22 +260,24 @@
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            height: 37vh;
+            height: 270px;
             width: 16vw;
-            background-color: white;
+            background-color: var(--primary-color);
             padding: 1vh 2vh;
             border-radius: 5px;
         }
 
         .footer {
-            background-color: rgb(255, 255, 255);
-            height: 40vh;
+            background-color:var(--primary-color);
+            height: 52vh;
             width: 100vw;
             display: grid;
+            color: var(--color);
             grid-template-columns: repeat(4, auto);
             grid-template-areas: "foot1 foot2 foot3 foot4";
             justify-content: space-evenly;
-            padding-top: 10vh;
+            background-color: var(--primary-color);
+            padding-top: 5vh;
         }
 
         .foot1 {
@@ -283,142 +317,91 @@
             font-size: 30px;
             padding: 2%;
         }
+        .stark{
+            text-align: center;
+            margin-top: -30px;
+        }
 
         .aaa {
             margin: 20%;
         }
-        @media screen and (min-width:550px) and (max-width:1024px) {
+        @media screen and (min-width:980px) and (max-width:1024px) {
         
 
-         .mem{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 3%;
-            /* width: 90vw; */
-         }
-          .baba{
-            padding-bottom: 20px;
-          }  
-        .article {
-        background-color: rgb(205, 248, 248);
-        height: 260vh;
-        display: grid;
-        justify-content: space-evenly;
-        padding-left: 10%;
-        align-items: center;
-        grid-template-areas: "item"
-                             "data"
-                             "bata"
-                             "cata"
-                             "eata"
-                             "fata";
-        }
-        .item2 {
-            position: absolute;
-            left: 230px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: 37vh;
-            width: 26vw;
-            background-color: white;
-            padding: 1vh 2vh;
-            border-radius: 5px;
-        }
-        .profile {
-            height: 90vh;
-            width: 100vw;
-            background-color: rgb(205, 248, 248);
-            display: flex;
-            flex-direction: column;
-            padding-left: 10%;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        .pro {
-            position: absolute;
-            left: 240px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: 37vh;
-            width: 26vw;
-            background-color: white;
-            padding: 1vh 2vh;
-            border-radius: 5px;
-        }
-        }
-        @media screen and (min-width:490px) and (max-width:550px) {
-        
         .mem{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 3%;
-        /* width: 90vw; */
-         } 
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           padding-top: 10px;
+           /* width: 90vw; */
+        }
          .baba{
-            padding-bottom: 20px;
-          }  
-
-        .article {
-        background-color: rgb(205, 248, 248);
-        height: 260vh;
-        display: grid;
-        justify-content: space-evenly;
-        padding-left: 10%;
-        align-items: center;
-        grid-template-areas: "item"
-                             "data"
-                             "bata"
-                             "cata"
-                             "eata"
-                             "fata";
-        }
-        .item2 {
-            position: absolute;
-            left: 230px;
+           padding-bottom: 20px;
+         } 
+         .section {
+            background-color: var(--primary-color);
+            height: 49vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            height: 37vh;
-            width: 26vw;
-            background-color: white;
-            padding: 1vh 2vh;
-            border-radius: 5px;
-        }
-        .profile {
-            height: 90vh;
-            width: 100vw;
-            background-color: rgb(205, 248, 248);
-            display: flex;
-            flex-direction: column;
-            padding-left: 10%;
-            justify-content: space-evenly;
             align-items: center;
-        }
-        .pro {
-            position: absolute;
-            left: 240px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: 37vh;
-            width: 26vw;
-            background-color: white;
-            padding: 1vh 2vh;
-            border-radius: 5px;
-        }
-        .pavan {
-            font-size: 25px;
+            justify-content: center;
+        } 
+       .article {
+       background-color: var(--secondary-color);
+       height: 260vh;
+       display: grid;
+       justify-content: space-evenly;
+       padding-left: 10%;
+       align-items: center;
+       grid-template-areas: "item"
+                            "data"
+                            "bata"
+                            "cata"
+                            "eata"
+                            "fata";
+       }
+       .item2 {
+           position: absolute;
+           left: 230px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           height: 270px;
+           width: 26vw;
+           background-color: var(--primary-color);
+           padding: 1vh 2vh;
+           border-radius: 5px;
+       }
+       .profile {
+           height: 90vh;
+           width: 100vw;
+           background-color: var(--secondary-color);
+           display: flex;
+           flex-direction: column;
+           padding-left: 10%;
+           justify-content: space-evenly;
+           align-items: center;
+       }
+       .pro {
+           position: absolute;
+           left: 240px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           height: 245px;
+           width: 26vw;
+           background-color: var(--primary-color);
+           padding: 1vh 2vh;
+           border-radius: 5px;
+       }
+       .pavan {
+            font-size: 27px;
             font-family: Georgia, 'Times New Roman', Times, serif;
             text-align: center;
         }
         h1{
-            font-size: 25px;
+            font-size: 27px;
             text-align: center;
         }
         .unlock{
@@ -426,6 +409,449 @@
         }
         .stark{
             text-align: center;
+            margin-top: -20px;
+        }
+        .p2{
+            text-align: center;
+        }
+       }
+        @media screen and (min-width:979.9px) and (max-width:980px) {
+        
+
+         .mem{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            font-size: 25px;
+            /* width: 90vw; */
+         }
+          .baba{
+            padding-bottom: 20px;
+          }
+          .section {
+            background-color: var(--primary-color);
+            height: 20vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .section1 {
+            background-color: var(--primary-color);
+            height: 15vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1vh;
+        }  
+        .article {
+        background-color: var(--secondary-color);
+        height: 117vh;
+        display: grid;
+        justify-content: space-evenly;
+        padding-left: 10%;
+        align-items: center;
+        grid-template-areas: "item"
+                             "data"
+                             "bata"
+                             "cata"
+                             "eata"
+                             "fata";
+        }
+        .item2 {
+            position: absolute;
+            left: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 245px;
+            width: 26vw;
+            background-color: var(--primary-color);
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        .profile {
+            height: 40vh;
+            width: 100vw;
+            background-color: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            padding-left: 10%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .pro {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 245px;
+            width: 26vw;
+            background-color: var(--primary-color);
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        .pavan {
+            font-size: 39px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        h1{
+            font-size: 27px;
+            text-align: center;
+        }
+        .unlock{
+            text-align: center;
+            font-size: 20px;
+        }
+        .stark{
+            text-align: center;
+            font-size: 20px;
+            margin-top: -30px;
+        }
+        .p2{
+            text-align: center;
+        }
+        .item {
+            height: 37vh;
+            top: 50px;
+            width: 585px;
+            position: relative;
+        }
+        .data {
+            height: 37vh;
+            top: -300px;
+            width: 585px;
+            position: relative;
+        }
+
+        .bata {
+            height: 37vh;
+            width: 585px;
+            top: -640px;
+            position: relative;
+        }
+
+        .cata {
+            height: 37vh;
+            width: 585px;
+            top: -990px;
+            position: relative;
+        }
+
+        .eata {
+            height: 37vh;
+            top: -1350px;
+            width: 585px;
+            position: relative;
+        }
+
+        .fata {
+            height: 37vh;
+            width: 585px;
+            top: -1720px;
+            position: relative;
+        }
+        #pa11{
+            height: 37vh;
+            width: 585px;
+            position: relative;
+            top: 70px;
+            left: -30px;
+            grid-area: pa11;
+        }
+        #pa12{
+            height: 37vh;
+            width: 585px;
+            top: 20px;
+            left: -30px;
+            position: relative;
+            grid-area: pa12;
+        }
+        .footer {
+            background-color: var(--primary-color);
+            height: 20vh;
+            width: 100vw;
+            display: grid;
+            background-color: var(--primary-color);
+            grid-template-columns: repeat(4, auto);
+            grid-template-areas: "foot1 foot2 foot3 foot4";
+            justify-content: space-evenly;
+            padding-top: 1vh;
+        }
+        }
+        @media screen and (min-width:850px) and (max-width:979.9px) {
+        
+
+        .mem{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           padding-top: 10px;
+           /* width: 90vw; */
+        }
+         .baba{
+           padding-bottom: 20px;
+         }
+         .section {
+            background-color: var(--primary-color);
+            height: 49vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }  
+       .article {
+       background-color: var(--secondary-color);
+       height: 260vh;
+       display: grid;
+       justify-content: space-evenly;
+       padding-left: 10%;
+       align-items: center;
+       grid-template-areas: "item"
+                            "data"
+                            "bata"
+                            "cata"
+                            "eata"
+                            "fata";
+       }
+       .item2 {
+           position: absolute;
+           left: 230px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           height: 270px;
+           width: 26vw;
+           background-color: var(--primary-color);
+           padding: 1vh 2vh;
+           border-radius: 5px;
+       }
+       .profile {
+           height: 90vh;
+           width: 100vw;
+           background-color: var(--secondary-color);
+           display: flex;
+           flex-direction: column;
+           padding-left: 10%;
+           justify-content: space-evenly;
+           align-items: center;
+       }
+       .pro {
+           position: absolute;
+           left: 240px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           height: 270px;
+           width: 26vw;
+           background-color: var(--primary-color);
+           padding: 1vh 2vh;
+           border-radius: 5px;
+       }
+       .pavan {
+            font-size: 27px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        h1{
+            font-size: 27px;
+            text-align: center;
+        }
+        .unlock{
+            text-align: center;
+        }
+        .stark{
+            text-align: center;
+            margin-top: -30px;
+        }
+        .p2{
+            text-align: center;
+        }
+       }
+        @media screen and (min-width:550px) and (max-width:850px) {
+        
+
+        .mem{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           padding-top: 10px;
+           /* width: 90vw; */
+        }
+         .baba{
+           padding-bottom: 20px;
+         }
+         .section {
+            background-color: var(--primary-color);
+            height: 49vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }  
+       .article {
+       background-color: var(--secondary-color);
+       height: 260vh;
+       display: grid;
+       justify-content: space-evenly;
+       padding-left: 10%;
+       align-items: center;
+       grid-template-areas: "item"
+                            "data"
+                            "bata"
+                            "cata"
+                            "eata"
+                            "fata";
+       }
+       .item2 {
+           position: absolute;
+           left: 230px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           height: 270px;
+           width: 26vw;
+           background-color: var(--primary-color);
+           padding: 1vh 2vh;
+           border-radius: 5px;
+       }
+       .profile {
+           height: 90vh;
+           width: 100vw;
+           background-color: var(--secondary-color);
+           display: flex;
+           flex-direction: column;
+           padding-left: 10%;
+           justify-content: space-evenly;
+           align-items: center;
+       }
+       .pro {
+           position: absolute;
+           left: 240px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           height: 270px;
+           width: 26vw;
+           background-color: var(--primary-color);
+           padding: 1vh 2vh;
+           border-radius: 5px;
+       }
+       .pavan {
+            font-size: 26px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        h1{
+            font-size: 26px;
+            text-align: center;
+        }
+        .unlock{
+            text-align: center;
+        }
+        .stark{
+            text-align: center;
+            margin-top: -30px;
+        }
+        .p2{
+            text-align: center;
+        }
+       }
+        @media screen and (min-width:490px) and (max-width:550px) {
+        
+        .mem{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        /* width: 90vw; */
+         } 
+         .baba{
+            padding-bottom: 20px;
+          } 
+          .section {
+            background-color: var(--primary-color);
+            height: 49vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        } 
+
+        .article {
+        background-color: var(--secondary-color);
+        height: 260vh;
+        display: grid;
+        justify-content: space-evenly;
+        padding-left: 10%;
+        align-items: center;
+        grid-template-areas: "item"
+                             "data"
+                             "bata"
+                             "cata"
+                             "eata"
+                             "fata";
+        }
+        .item2 {
+            position: absolute;
+            left: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 270px;
+            width: 26vw;
+            background-color: var(--primary-color);
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        .profile {
+            height: 90vh;
+            width: 100vw;
+            background-color: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            padding-left: 10%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .pro {
+            position: absolute;
+            left: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 270px;
+            width: 26vw;
+            background-color: var(--primary-color);
+            padding: 1vh 2vh;
+            border-radius: 5px;
+        }
+        .pavan {
+            font-size: 23px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        h1{
+            font-size: 23px;
+            text-align: center;
+        }
+        .unlock{
+            text-align: center;
+            font-size: 15px;
+        }
+        .stark{
+            text-align: center;
+            font-size: 15px;
+            margin-top: -30px;
         }
         .p2{
             text-align: center;
@@ -435,7 +861,7 @@
 
         @media screen and (min-width:280px) and (max-width:490px) {
         .section {
-            background-color: rgb(255, 255, 255);
+            background-color: var(--primary-color);
             height: 44vh;
             display: flex;
             flex-direction: column;
@@ -443,7 +869,7 @@
             justify-content: center;
         }
         .article {
-        background-color: rgb(205, 248, 248);
+        background-color: var(--secondary-color);
         height: 520vh;
         display: grid;
         align-content: start;
@@ -516,16 +942,16 @@
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            height: 37vh;
+            height: 270px;
             width: 225px;
-            background-color: white;
+            background-color: var(--primary-color);
             padding: 1vh 2vh;
             border-radius: 5px;
         }
         .profile {
             height: 175vh;
             width: 100vw;
-            background-color: rgb(205, 248, 248);
+            background-color: var(--secondary-color);
             display: grid;
             padding-left: 30%;
             grid-template-columns: "pa11"
@@ -543,7 +969,7 @@
             justify-content: space-evenly;
             height: 37vh;
             width: 225px;
-            background-color: white;
+            background-color: var(--primary-color);
             padding: 1vh 2vh;
             border-radius: 5px;
         }
@@ -565,6 +991,11 @@
             text-align: center;
             font-size: 10px;
             padding-left: 5px;
+            margin-top: -20px;
+        }
+        #moon{
+            height: 30px;
+            width: 30px;
         }
         #pa11{
             height: 37vh;
@@ -621,9 +1052,9 @@
 <body>
     <div class="container">
         <div class="aa header">
-            <p class="stark">Stark UI &nbsp;&nbsp; Team 03</p>
-            <a class="pavan" href="./uiwebsite.html">&nbsp; PAVAN SOLUTIONS</a>
-            <a class="unlock" href="./uiwebsite.html">Unlock 100+ Skills</a>
+            <p class="stark"><img id="moon" src="./img/moon.png" alt="">Stark UI&nbsp;Team</p>
+            <a class="pavan" href="./uidemo.html">&nbsp; PAVAN SOLUTIONS</a>
+            <a class="unlock" href="./uidemo.html">Unlock 100+ Skills</a>
         </div>
         <div class="aa section">
             <p class="p1">TEAM SECTION</p>
@@ -655,7 +1086,7 @@
             </div>
             <div class="data">
                 <div class="item1" id="bro">
-                    <div class="pa1"> <img class="img1" src="./img/pa11.jpg"></div>
+                     <img class="img1" src="./img/pa11.jpg">
                 </div>
                 <div class="item2">
                     <h2>PAOne KUMAR</h2>
@@ -671,7 +1102,7 @@
             </div>
             <div class="bata">
                 <div class="item1" id="bro">
-                    <div class="pa1"> <img class="img1" src="./img/sololeveling1.jpg"></div>
+                    <img class="img1" src="./img/sololeveling1.jpg">
                 </div>
                 <div class="item2">
                     <h2>Sung Jin-woo</h2>
@@ -687,7 +1118,7 @@
             </div>
             <div class="cata">
                 <div class="item1" id="bro">
-                    <div class="pa1"> <img class="img1" src="./img/wind-breaker1.jpg"></div>
+                    <img class="img1" src="./img/wind-breaker1.jpg">
                 </div>
                 <div class="item2">
                     <h2>Uindo Bureikā</h2>
@@ -703,7 +1134,7 @@
                 </div>
             <div class="eata">
                 <div class="item1" id="bro">
-                    <div class="pa1"> <img class="img1" src="./img/aot1.jpg"></div>
+                    <img class="img1" src="./img/aot1.jpg">
                 </div>
                 <div class="item2">
                     <h2>Eren Yeager</h2>
@@ -719,7 +1150,7 @@
             </div>
             <div class="fata">
                 <div class="item1" id="bro">
-                    <div class="pa1"> <img class="img1" src="./img/bleach1.jpg"></div>
+                     <img class="img1" src="./img/bleach1.jpg">
                 </div>
                 <div class="item2">
                     <h2>Ichigo Kurosaki</h2>
@@ -742,7 +1173,7 @@
         <div class="aa profile">
             <div class="eata" id="pa11">
                 <div class="item1" id="broo">
-                    <div class="pa1"> <img class="img1" src="./img/kamuei1.jpeg"></div>
+                    <img class="img1" src="./img/kamuei1.jpeg">
                 </div>
                 <div class="pro">
                     <h2>Joe Logan</h2>
@@ -758,7 +1189,7 @@
             </div>
             <div class="fata" id="pa12">
                 <div class="item1" id="broo">
-                    <div class="pa1"> <img class="img1" src="./img/naruto1.jpg"></div>
+                   <img class="img1" src="./img/naruto1.jpg">
                 </div>
                 <div class="pro">
                     <h2>Naruto Uzumaki</h2>
@@ -790,25 +1221,25 @@
             </div>
             <div class="foot2">
                 <h3 class="aaa">Headers</h3>
-                <p class="aaa">header01</p>
-                <p class="aaa">header02</p>
-                <p class="aaa">header03</p>
-                <p class="aaa">header04</p>
+                <p class="aaa">Pa1</p>
+                <p class="aaa">Ichigo</p>
+                <p class="aaa">Eren</p>
+                <p class="aaa">Jin-woo</p>
                 <br>
                 <br>
                 <h3 class="aaa">Navigation</h3>
-                <p class="aaa">Navigation01</p>
-                <p class="aaa">Navigation02</p>
+                <p class="aaa">Hyderabad</p>
+                <p class="aaa">Bhimavaram</p>
                 <!-- <p class="aaa">Navigation03</p>
                 <p class="aaa">Navigation04</p> -->
             </div>
             <div class="foot3">
                 <h3 class="aaa">Content</h3>
-                <p class="aaa">Content01</p>
-                <p class="aaa">Content02</p>
-                <p class="aaa">Content03</p>
-                <p class="aaa">Content04</p>
-                <p class="aaa">Content05</p>
+                <p class="aaa">8179658489</p>
+                <p class="aaa">8179658489</p>
+                <p class="aaa">8179658489</p>
+                <p class="aaa">02000121</p>
+                <p class="aaa">02000121</p>
             </div>
             <div class="foot4">
                 <h3 class="aaa">Career</h3>
@@ -831,6 +1262,25 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     
+    <script>
+        //gets the button by ID from your HTML element
+        const themeBtn = document.getElementById("moon");
+        //when you click that button
+        themeBtn.onclick = () => {
+        //the default class "fa-moon" switches to "fa-sun" on toggle
+          themeBtn.classList.toggle("sun");
+        //after the switch on toggle, if your button contains "fa-sun" class
+          if (themeBtn.classList.contains("sun")) {
+        //onclicking themeBtn, the changeTheme styling will be applied to the body of your HTML
+            document.body.classList.add("dark");
+          } else {
+        // onclicking themeBtn, applied changeTheme styling will be removed
+            document.body.classList.remove("dark");
+          }
+        }
+    </script>
+
 </body>
 
 </html>
